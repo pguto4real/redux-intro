@@ -7,7 +7,7 @@ const counterReducer = (state = { counter: 0 }, action) => {
 };
 const store = redux.createStore(counterReducer);
 
-console.log(store.getState());
+// console.log(store.getState());
 
 counterSubscriber = () => {
   const latestState = store.getState();
@@ -16,4 +16,4 @@ counterSubscriber = () => {
 };
 
 store.subscribe(counterSubscriber);
-store.dispatch();
+store.dispatch({ type: "increment" });
