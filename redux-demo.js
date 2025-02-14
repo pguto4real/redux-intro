@@ -24,5 +24,5 @@ counterSubscriber = () => {
 };
 
 store.subscribe(counterSubscriber);
-store.dispatch({ type: "increment" });
 store.dispatch({ type: "decrement" });
+store.dispatch({ type: "increment" });
